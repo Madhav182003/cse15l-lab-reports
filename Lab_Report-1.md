@@ -12,7 +12,7 @@ The tasks to be performed are -
 
 ## Step-1 Installing VSCode
 
-Use the folloiwing link to go to the VSCode website [Link](https://code.visualstudio.com/), and follow the on screen instructions to download and install it on your computer.
+Use the following link to go to the VSCode website [Link](https://code.visualstudio.com/), and follow the on screen instructions to download and install it on your computer.
 
 There are different versions available for all major OS like windows, mac etc.
 
