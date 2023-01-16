@@ -34,6 +34,47 @@ You will then be redirected to the following screen -
 
 ![Image](https://user-images.githubusercontent.com/122562063/212574449-b08a64a7-eaa0-4aff-b8c7-6e8541f42e14.png)
 
+Here you can see your Course sepcific username. Click on it and change your password by following the on screen instructions.
+
+After you are done changing and password and noting down your username, open a terminal in VSCode.
+
+Then use the *ssh* command given below but replace the **zz** with the the letters in your own username to connect to the server.
+
+    $ ssh cs15lwi23zz@ieng6.ucsd.edu
+
+Then enter the password that you just changed.
+
+Once logged in a screen like the one below will appear
+
+![Image](https://user-images.githubusercontent.com/122562063/212586523-19066250-2e68-497f-b2a7-b4b711dd916e.png)
+
+Now your terminal is connected to a computer in the CSE Basement and commands run by you will run on that computer.
+
+## Trying some Commands
+
+Now you can try running some commands like **cd, ls, pwd, mkdir, and cp** on your computer and the remote computer.
+
+Below are some specific commands to try-
+
+* cd ~
+* cd
+* ls -lat
+* ls -a
+* ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc, where the abc is one of the other group members’ username
+* cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/
+* cat /home/linux/ieng6/cs15lwi23/public/hello.txt
+
+![Image](https://user-images.githubusercontent.com/122562063/212587475-87f75f86-3ab8-4740-9440-44429ffe23b0.png)
+  
+
+
+To log out you can use the following-
+  
+* Control-D
+* run the command **exit**
+
+
+
 
 
 
