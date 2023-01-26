@@ -66,6 +66,12 @@ Below are some specific commands to try-
 * cat /home/linux/ieng6/cs15lwi23/public/hello.txt , It reads data from the file and gives their content as output. It helps us to create, view, concatenate files.
 
 ![Image](https://user-images.githubusercontent.com/122562063/212587475-87f75f86-3ab8-4740-9440-44429ffe23b0.png)
+
+Here, pwd shows my curent directory
+
+cd~ changes my current directory to the home directory
+
+and ls -lat lists all the files in my current directory.
   
 
 
