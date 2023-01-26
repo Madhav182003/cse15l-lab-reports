@@ -57,13 +57,13 @@ Now you can try running some commands like **cd, ls, pwd, mkdir, and cp** on you
 
 Below are some specific commands to try-
 
-* cd ~ Changes directory to home directory
-* cd Chnages cuirrent directory to specified directory.
-* ls -lat shows file or directory, size, modified date and time, file or folder name and owner of the file, and its permission.
-* ls -a lists all files including hidden files
-* ls <directory> where <directory> is /home/linux/ieng6/cs15lwi23/cs15lwi23abc, where the abc is one of the other group members’ username. lists the files  in the gropu members directory.
-* cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/ cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name.
-* cat /home/linux/ieng6/cs15lwi23/public/hello.txt It reads data from the file and gives their content as output. It helps us to create, view, concatenate files.
+* cd ~ , Changes directory to home directory
+* cd , Changes current directory to specified directory.
+* ls -lat , shows file or directory, size, modified date and time, file or folder name and owner of the file, and its permission.
+* ls -a , lists all files including hidden files
+* ls 'directory' where 'directory' is /home/linux/ieng6/cs15lwi23/cs15lwi23abc , where the abc is one of the other group members’ username. lists the files  in the group member's directory.
+* cp /home/linux/ieng6/cs15lwi23/public/hello.txt ~/ , cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name.
+* cat /home/linux/ieng6/cs15lwi23/public/hello.txt , It reads data from the file and gives their content as output. It helps us to create, view, concatenate files.
 
 ![Image](https://user-images.githubusercontent.com/122562063/212587475-87f75f86-3ab8-4740-9440-44429ffe23b0.png)
   
