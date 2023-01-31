@@ -95,8 +95,6 @@ Now, newStr has a value of Hi\nEveryone\n.
         
 This input induces a failure.
 
-<img width="368" alt="Screenshot 2023-01-30 at 6 50 25 PM" src="https://user-images.githubusercontent.com/122562063/215650496-eb16cac1-c5bd-4618-b443-c93c313874e1.png">
-
 @Test
     
     public void testFilter2(){
@@ -123,5 +121,54 @@ This input induces a failure.
     }
 This input doesn't induce a failure.
  
+Running of the two tests in vscode- 
 
+<img width="1680" alt="Screenshot 2023-01-30 at 11 05 52 PM" src="https://user-images.githubusercontent.com/122562063/215690213-220d1f65-849d-4300-8ee8-b66141c753be.png">
 
+Code before bug fix-
+
+    class ListExamples {
+
+    // Returns a new list that has all the elements of the input list for which
+    // the StringChecker returns true, and not the elements that return false, in
+    // the same order they appeared in the input list;
+    static List<String> filter(List<String> list, StringChecker sc) {
+        List<String> result = new ArrayList<>();
+        for(String s: list) {
+            if(sc.checkString(s)) {
+                result.add(0,s);
+            }
+        }
+        return result;
+    }
+ 
+Code after bug fix- 
+
+    class ListExamples {
+
+    // Returns a new list that has all the elements of the input list for which
+    // the StringChecker returns true, and not the elements that return false, in
+    // the same order they appeared in the input list;
+    static List<String> filter(List<String> list, StringChecker sc) {
+        List<String> result = new ArrayList<>();
+            for(String s: list) {
+                if(sc.checkString(s)) {
+                    result.add(s);
+                }
+            }
+        return result;
+    }
+ 
+This code had a very small bug- result.add(0,s) instead of result.add(s).
+
+This resulted in the result array to show its elements in the order opposite of what was intended as elements were being
+
+prepended in the new array instead of being appended.
+
+## Part - 3 (Something new I learned)
+
+I learned how to write and run junit tests in vscode in lab 2 which I didn't know before. This is a very useful tool for 
+
+unit testing your code. I also learned how to debug a piece of code. We were given a bunch of methods with bugs and we had to write
+
+Junit tests to figure out the bugs and fix it. These are extremely useful skills and I think will help me tremendously in the future.
