@@ -1,1 +1,127 @@
+# Lab Report - 2
+## Madhav Bansal
+
+## Part - 1 (String Server)
+
+We had to make a StringServer that can keep track of a single string that gets added to by incoming requests.
+
+The request looks like this - "/add-message?s=Hello"
+
+The effect of this request is to concatenate a new line (\n) and the string after = to the running string, and then respond with the entire string so far.
+
+The code I wrote for the web Server is-
+
+<img width="1358" alt="Screenshot 2023-01-30 at 5 54 21 PM" src="https://user-images.githubusercontent.com/122562063/215639761-bd30eaff-1ed8-47b8-af4c-fc3215008750.png">
+
+The Server when it starts- 
+<img width="1680" alt="Screenshot 2023-01-30 at 5 57 21 PM" src="https://user-images.githubusercontent.com/122562063/215640182-b4815055-0679-455a-ae33-d84961542e0e.png">
+
+Using /add-message 1st time.
+<img width="1680" alt="Screenshot 2023-01-30 at 5 55 33 PM" src="https://user-images.githubusercontent.com/122562063/215640410-a7c434ea-5a5e-404f-8d47-53957d7ea146.png">
+
+Server After using /add-message?s=Hi.
+<img width="1680" alt="Screenshot 2023-01-30 at 5 55 45 PM" src="https://user-images.githubusercontent.com/122562063/215640438-2335c6cf-1f94-4bfd-b0a0-5a2db1cad6bd.png">
+
+When I used /add-message the method handleRequest from my code was called.
+
+The argument for handleRequest is URI url which gets the value of the whole URL of the server (http://localhost:4001/add-message?s=Hi).
+
+At this point newStr is empty but when the method gets called it checks if the path of the url contains /add-message.
+
+If it contains /add-message it then checks if there is any String to be added to newStr
+
+To do this, it splits the query part of the url across the "=". and in this case the value path variable gets is {"s","Hi"}.
+
+And if it has the String is added with a \n.
+
+Now, newStr has a value of Hi\n.
+
+Using /add-message 2nd time.
+
+<img width="1680" alt="Screenshot 2023-01-30 at 5 55 55 PM" src="https://user-images.githubusercontent.com/122562063/215642280-9d41f6f8-df7f-4802-b93a-60668cc331d4.png">
+
+Server After using /add-message?s=Everyone.
+<img width="1680" alt="Screenshot 2023-01-30 at 5 56 02 PM" src="https://user-images.githubusercontent.com/122562063/215642383-3cba3015-0a81-4961-ac27-9779087b46bc.png">
+
+When I used /add-message the method handleRequest from my code was called.
+
+The argument for handleRequest is URI url which gets the value of the whole URL of the server (http://localhost:4001/add-message?s=everone).
+
+At this point newStr has a value of Hi\n.
+
+When the method is called it checks if the path contains /add-message.
+
+If it contains /add-message it then checks if there is any String to be added to newStr
+
+To do this, it splits the query part of the url across the "=". and in this case the value path variable gets is {"s","Everyone"}.
+
+And if it has the String is added with a \n.
+
+
+Now, newStr has a value of Hi\nEveryone\n.
+
+# Part-2 (Debugging)
+
+@Test
+    
+    public void testFilter(){
+        
+        List<String> testList= new ArrayList<>();
+
+        testList.add("band");
+        testList.add("bake");
+        testList.add("hello");
+        testList.add("bald");
+        testList.add("madhav");
+
+        StringChecker sc=new StringChecker() {
+            public boolean checkString(String s) {
+                if (s.contains("ba")){
+                    return true;
+                }else{
+                    return false;
+                }
+             }
+            
+        };
+        List<String> answerList= new ArrayList<>();
+        answerList.add("band");
+        answerList.add("bake");
+        answerList.add("bald");
+
+        assertEquals(answerList,ListExamples.filter(testList,sc));
+        
+        
+        
+This input induces a failure.
+
+<img width="368" alt="Screenshot 2023-01-30 at 6 50 25 PM" src="https://user-images.githubusercontent.com/122562063/215650496-eb16cac1-c5bd-4618-b443-c93c313874e1.png">
+
+@Test
+    
+    public void testFilter2(){
+        
+        List<String> testList= new ArrayList<>();
+
+        testList.add("band");
+        testList.add("hello");
+        testList.add("madhav");
+
+        StringChecker sc=new StringChecker() {
+            public boolean checkString(String s) {
+                if (s.contains("ba")){
+                    return true;
+                }else{
+                    return false;
+                }
+             }
+            
+        };
+        List<String> answerList= new ArrayList<>();
+        answerList.add("band");
+        assertEquals(answerList,ListExamples.filter(testList,sc));
+    }
+This input doesn't induce a failure.
+ 
+
 
