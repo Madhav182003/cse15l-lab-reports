@@ -23,7 +23,13 @@ to replenish the supplies of water on their ships before they began the long jou
 As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — 
 in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
 ```
+
+
+
 This command recursively searched the directory for the string "Lucayans" and showed the paragraph within the file that contained it.
+
+
+
 
 ```
 grep -r "tilted" written_2
@@ -37,13 +43,19 @@ copper domes. The 58 floors of 500 Fifth Avenue (at the corner of Fifth Avenue a
 Lamb prior to the Empire State Building, step back dramatically as they reach the building’s apex. Spiky, wrought-iron finials enliven the
 chateau-like roof of the Scientific American Building. An animated silhouette of black brick with gilded and red highlights crowns the Radiator
 Building. According to Hood, the dramatic effect (floodlit at night) suggested a “pile of coal, glowing at the top.”
+
 ```
 
+
+
 This command recursively searched the directory for the string "tilted" and showed the paragraph within the file that contained it.
+
 
 ---
 
 2. grep -l command option of grep shows only the names of files that contain at least one matching line, not the matching lines themselves. (source of information ChatGpt)
+
+
 
 ```
 grep -r -l "Italy" written_2
@@ -83,17 +95,35 @@ written_2/travel_guides/berlitz2/Portugal-History.txt
 written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 
 ```
+
+
+
 The -l option only showed the names of the files that contained the string "Italy".
+
+
+
 
 ```
 grep -r -l "Lucayans"  written_2
 written_2/travel_guides/berlitz2/Bahamas-History.txt
 ```
+
+
+
 The -l option only showed the name of the file that contained the string "Lucayans".
+
+
+
 
 ---
 
+
+
+
 3. grep -c command option of grep shows only a count of the number of matching lines for each file. (source of information ChatGpt)
+
+
+
 
 ```
 grep -c -r "India" written_2
@@ -321,8 +351,15 @@ written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:6
 written_2/travel_guides/berlitz2/Vallarta-History.txt:1
 written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt:0
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:0
+
 ```
+
+
+
 This comand shows how many times the string "India" appeared in each file.
+
+
+
 
 ```
 grep -c -r "Bahamas" written_2
@@ -550,11 +587,28 @@ written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt:0
 written_2/travel_guides/berlitz2/Vallarta-History.txt:0
 written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt:0
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt:0
+
 ```
+
+
+
+
 This comand shows how may times the string "India" appeared in each file.
 
+
+
+
+
 ---
+
+
+
+
 4. grep -n command option of grep prefixes each line of output with the line number within the file. (source of information ChatGpt)
+
+
+
+
 
 ```
 grep -r -n "Lucayans" written_2
@@ -573,8 +627,17 @@ Bermuda, and their home ports. On Eleuthera the explorers dug a fresh-water well
 to replenish the supplies of water on their ships before they began the long journey back to Europe with their cargoes of South American gold.
 As for the Lucayans, within 25 years all of them, perhaps some 30,000 people, were removed from the Bahamas to work — and die — 
 in Spanish gold mines and on farms and pearl fisheries on Hispaniola (Haiti), Cuba, and elsewhere in the Caribbean.
+
 ```
+
+
+
+
 The -n command shows the line number of the line in which the string "Lucayans" is present within the file.
+
+
+
+
 
 ```
 grep -r "tilted" written_2
@@ -588,7 +651,12 @@ copper domes. The 58 floors of 500 Fifth Avenue (at the corner of Fifth Avenue a
 Lamb prior to the Empire State Building, step back dramatically as they reach the building’s apex. Spiky, wrought-iron finials enliven the
 chateau-like roof of the Scientific American Building. An animated silhouette of black brick with gilded and red highlights crowns the Radiator
 Building. According to Hood, the dramatic effect (floodlit at night) suggested a “pile of coal, glowing at the top.”
+
 ```
+
+
+
+
 
 The -n command shows the line number of the line in which the string "tilted" is present within the file.
 
