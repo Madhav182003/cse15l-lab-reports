@@ -4,6 +4,7 @@
 ## Researching Commands
 
 1. grep -r command option of grep recursively searches the directory and subdirectories (if any). (source of information ChatGpt)
+
 ```
 grep -r "Lucayans" written_2
 
@@ -80,6 +81,7 @@ written_2/travel_guides/berlitz2/CstaBlanca-WhereToGo.txt
 written_2/travel_guides/berlitz2/Paris-WhereToGo.txt
 written_2/travel_guides/berlitz2/Portugal-History.txt
 written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+
 ```
 The -l option only showed the names of the files that contained the string "Italy".
 
