@@ -93,11 +93,11 @@ Then I pressed `< ^R >` to open the search and typed java to find the run comman
 
 To commit you first have to make the changes available to commit.
 
-So, I first typed git add .
+So, I first typed `<git add>` .
 
-Then I typed git commit -m "Fixed" to commit the changes with the message Fixed.
+Then I typed `<git commit -m "Fixed">` to commit the changes with the message Fixed.
 
-Then I typed git push to push the changes to my repository.
+Then I typed `<git push>` to push the changes to my repository.
 
 <img width="1680" alt="Screenshot 2023-02-27 at 3 14 39 AM" src="https://user-images.githubusercontent.com/122562063/221549974-388eceb7-0747-4a97-8d2f-5a6ec5844675.png">
 
