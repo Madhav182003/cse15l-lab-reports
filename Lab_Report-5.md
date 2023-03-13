@@ -3,7 +3,7 @@
 
 ## Researching Commands
 
- 1.`find -name`  command option finds the files based on their name. (source of information ChatGpt)
+ 1 .`find -name`  command option finds the files based on their name. (source of information ChatGpt)
 
 ```
 MacBook-Pro-2:written_2 madhavbansal$ find ../written_2  -name "Bahamas-History.txt"
@@ -22,7 +22,7 @@ This command searches for the file with the name ch2.txt and returns the path of
 
 ---
 
- 2.`find -type` command option searches for files based on their type( regular files, directories, etc.). (source of information ChatGpt)
+ 2 .`find -type` command option searches for files based on their type( regular files, directories, etc.). (source of information ChatGpt)
 
 ```
 find written_2 -type d
@@ -62,7 +62,7 @@ This command searches and returns all the regular files.
 
 ---
 
- 3.`find -size` option searches for files based on thier size. (source of information ChatGpt)
+ 3 .`find -size` option searches for files based on thier size. (source of information ChatGpt)
 
 ```
 MacBook-Pro-2:docsearch madhavbansal$ find written_2 -size +100k
@@ -88,7 +88,7 @@ written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
 This command returns files with a size of more than 200 KiloBytes.
 
 ---
- 4.`find -mindepth` option starts the search at a minimum depth in the directory tree. (source of information ChatGpt)
+ 4 .`find -mindepth` option starts the search at a minimum depth in the directory tree. (source of information ChatGpt)
 
 ```
 MacBook-Pro-2:docsearch madhavbansal$ find written_2 -type f -mindepth 4
